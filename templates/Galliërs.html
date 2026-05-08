@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ album.name }} | ReefBucket</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>{{ album.name }}</h1>
+    <p>WYSIWYG Coral Pre-Order</p>
+  </div>
+
+  <div class="info">
+    <strong>Hoe werkt het?</strong><br>
+    Zie je een koraal dat je graag wilt? Klik op de WhatsApp-knop of geef de code door in de groep.
+  </div>
+
+  <div class="grid">
+    {% for image in album.images %}
+      <div class="coral-card">
+        <a href="/uploads/{{ image.web }}" target="_blank">
+          <img src="/uploads/{{ image.thumb }}" alt="{{ image.code }}">
+        </a>
+
+        <h3>{{ image.code }}</h3>
+        <p>Status: {{ image.status }}</p>
+
+        <a class="whatsapp"
+           target="_blank"
+           href="https://wa.me/{{ whatsapp_number }}?text=Hoi%20ReefBucket,%20ik%20heb%20interesse%20in%20{{ image.code }}%20uit%20de%20Coral%20Pre-Order.">
+          Interesse via WhatsApp
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+</body>
+</html>
