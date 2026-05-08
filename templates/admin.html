@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>ReefBucket WYSIWYG Admin</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>ReefBucket WYSIWYG Admin</h1>
+
+  <form method="POST" enctype="multipart/form-data" class="card">
+    <label>Albumnaam</label>
+    <input type="text" name="album_name" placeholder="WYSIWYG SPS 3" required>
+
+    <label>Prefix</label>
+    <input type="text" name="prefix" value="SPS" required>
+
+    <label>ZIP-bestand met foto's</label>
+    <input type="file" name="zip_file" accept=".zip" required>
+
+    <button type="submit">Upload & maak galerij</button>
+  </form>
+
+  <h2>Bestaande albums</h2>
+
+  <div class="album-list">
+    {% for slug, album in albums.items() %}
+      <a href="/gallery/{{ slug }}" class="album-link">
+        {{ album.name }} — {{ album.images|length }} koralen
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+</body>
+</html>
