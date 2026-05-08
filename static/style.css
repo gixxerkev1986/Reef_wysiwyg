@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  background: #06131f;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+}
+
+h1 {
+  color: #1da9ff;
+  margin-bottom: 5px;
+}
+
+.card,
+.info {
+  background: #0d2133;
+  border: 1px solid #1da9ff55;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #bfe9ff;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+button,
+.whatsapp {
+  display: inline-block;
+  background: #1da9ff;
+  color: #00111c;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.coral-card {
+  background: #0d2133;
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid #1da9ff33;
+}
+
+.coral-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.coral-card h3 {
+  color: #1da9ff;
+}
+
+.album-link {
+  display: block;
+  background: #0d2133;
+  color: white;
+  padding: 14px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+}
